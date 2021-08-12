@@ -121,7 +121,7 @@ Tested in Unity 3D on the following platforms:
 * PS4 (with IL2CPP backend)
 * Windows Store (including 8.1, Phone 8.1, Universal 8.1 and Universal 10 - both .NET and IL2CPP backend)
 
-IL2CPP is supported, however there are some gotchas - see [here](#aot-support) for details
+IL2CPP is supported, however there are some gotchas - see [here](#does-this-work-on-aot-platforms-such-as-ios-and-webgl) for details
 
 This project is open source.
 
