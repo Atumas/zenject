@@ -7,6 +7,11 @@ namespace Zenject.Internal
     public static class ZenjectTestUtil
     {
         public const string UnitTestRunnerGameObjectName = "Code-based tests runner";
+         /// <summary>
+        /// Addressable resource manager
+        /// </summary>
+        public const string ResourceManagerCallbacks     = "ResourceManagerCallbacks";
+
 
         public static void DestroyEverythingExceptTestRunner(bool immediate)
         {
@@ -31,7 +36,8 @@ namespace Zenject.Internal
 
                 foreach (var rootObj in dontDestroyOnLoadRoots)
                 {
-                    if (rootObj.name != UnitTestRunnerGameObjectName)
+                    if (rootObj.name != UnitTestRunnerGameObjectName && 
+                        rootObj.name != ResourceManagerCallbacks)
                     {
                         if (immediate)
                         {
