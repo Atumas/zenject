@@ -337,7 +337,7 @@ public class GameInstaller : MonoInstaller
     {
         Container.BindInterfacesTo<GameRunner>().AsSingle();
 
-        Container.BindFactory<float, Ship, Ship.Factory>().FromSubContainerResolve().ByNewContextPrefab<ShipInstaller>(ShipPrefab);
+        Container.BindFactory<float, Ship, Ship.Factory>().FromSubContainerResolve().ByNewContextPrefab(ShipPrefab);
     }
 }
 ```
