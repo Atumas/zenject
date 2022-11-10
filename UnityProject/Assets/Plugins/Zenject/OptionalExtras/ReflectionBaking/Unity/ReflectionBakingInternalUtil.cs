@@ -61,6 +61,9 @@ namespace Zenject.ReflectionBaking
 
         public static void TryForceUnityFullCompile()
         {
+#if UNITY_2017_1_OR_NEWER
+            UnityEditor.Compilation.CompilationPipeline.RequestScriptCompilation();
+#else
             Type compInterface = typeof(UnityEditor.Editor).Assembly.GetType(
                 "UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface");
 
@@ -71,6 +74,7 @@ namespace Zenject.ReflectionBaking
 
                 dirtyAllScriptsMethod.Invoke(null, null);
             }
+#endif
 
             UnityEditor.AssetDatabase.Refresh();
         }
