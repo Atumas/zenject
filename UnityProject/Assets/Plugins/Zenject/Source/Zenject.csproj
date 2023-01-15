@@ -164,6 +164,7 @@
     <Compile Include="Runtime\Kernels\Kernel.cs" />
     <Compile Include="Runtime\PoolableManager.cs" />
     <Compile Include="Util\ActionInstaller.cs" />
+    <Compile Include="Util\ConstructorChoiceStrategy.cs" />
     <Compile Include="Util\DisposeBlock.cs" />
     <Compile Include="Util\ProfileBlock.cs" />
     <Compile Include="Util\ReflectionInfoTypeInfoConverter.cs" />
