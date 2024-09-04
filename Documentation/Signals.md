@@ -27,7 +27,7 @@
 
 * Introduction
     * <a href="#theory">Theory</a>
-    * <a href="#quick-start">Signals Quick Start</a>
+    * <a href="#signals-quick-start">Signals Quick Start</a>
     * <a href="#declaration">Signals Declaration</a>
     * <a href="#declaration-syntax">Declaration Binding Syntax</a>
     * <a href="#firing">Signal Firing</a>
