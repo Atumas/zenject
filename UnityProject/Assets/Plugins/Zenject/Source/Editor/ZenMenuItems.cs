@@ -34,7 +34,7 @@ namespace Zenject.Internal
         [MenuItem("GameObject/Zenject/Scene Context", false, 9)]
         public static void CreateSceneContext(MenuCommand menuCommand)
         {
-            var root = new GameObject("SceneContext").AddComponent<SceneContext>();
+            var root = ObjectFactory.CreateGameObject("SceneContext", typeof(SceneContext));
             Selection.activeGameObject = root.gameObject;
 
             EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
@@ -43,7 +43,7 @@ namespace Zenject.Internal
         [MenuItem("GameObject/Zenject/Decorator Context", false, 9)]
         public static void CreateDecoratorContext(MenuCommand menuCommand)
         {
-            var root = new GameObject("DecoratorContext").AddComponent<SceneDecoratorContext>();
+            var root = ObjectFactory.CreateGameObject("DecoratorContext", typeof(SceneDecoratorContext));
             Selection.activeGameObject = root.gameObject;
 
             EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
@@ -52,7 +52,7 @@ namespace Zenject.Internal
         [MenuItem("GameObject/Zenject/Game Object Context", false, 9)]
         public static void CreateGameObjectContext(MenuCommand menuCommand)
         {
-            var root = new GameObject("GameObjectContext").AddComponent<GameObjectContext>();
+            var root = ObjectFactory.CreateGameObject("GameObjectContext", typeof(GameObjectContext));
             Selection.activeGameObject = root.gameObject;
 
             EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
